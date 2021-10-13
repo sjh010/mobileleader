@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobileleader.edoc.data.mapper.EdocFileProcessMapper">
+	<resultMap id="BaseResultMap" type="com.mobileleader.edoc.data.dao.TbEdsElecDocFileProcsMgmtVo">
+		<result column="ELEC_DOC_GROUP_INEX_NO" jdbcType="VARCHAR" property="elecDocGroupInexNo" />
+		<result column="FILE_SEQ_NO" jdbcType="NUMERIC" property="fileSeqNo" />
+		<result column="LEFRM_CD" jdbcType="VARCHAR" property="lefrmCd" />
+		<result column="LEFRM_NM" jdbcType="VARCHAR" property="lefrmNm" />
+		<result column="XML_FILE_NM" jdbcType="VARCHAR" property="xmlFileNm" />
+		<result column="PDF_FILE_NM" jdbcType="VARCHAR" property="pdfFileNm" />
+		<result column="PAGE_CNT" jdbcType="NUMERIC" property="pageCnt" />
+		<result column="PROCS_STEP_CD" jdbcType="CHAR" property="procsStepCd" />
+		<result column="PROCS_STEP_STCD" jdbcType="CHAR" property="procsStepStcd" />
+		<result column="SIGN_FILE_NM" jdbcType="VARCHAR" property="signFileNm" />
+		<result column="SEAL_FILE_NM" jdbcType="VARCHAR" property="sealFileNm" />
+		<result column="CRTN_TIME" jdbcType="TIMESTAMP" property="crtnTime" />
+		<result column="LEFRM_VER" jdbcType="VARCHAR" property="lefrmVer" />
+		<result column="GUID" jdbcType="VARCHAR" property="guid" />
+		<result column="MAIN_LEFRM_CD" jdbcType="VARCHAR" property="mainlefrmCd" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		ELEC_DOC_GROUP_INEX_NO, FILE_SEQ_NO, LEFRM_CD, LEFRM_NM, XML_FILE_NM, PDF_FILE_NM,
+		PAGE_CNT, PROCS_STEP_CD, PROCS_STEP_STCD, SIGN_FILE_NM, SEAL_FILE_NM, CRTN_TIME,
+		LEFRM_VER, GUID, MAIN_LEFRM_CD
+	</sql>
+	
+	<select id="selectListByEdocIndexNo" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM
+			EDS_ELEC_DOC_FILE_PROCS_MGMT
+		WHERE
+			ELEC_DOC_GROUP_INEX_NO = #{elecDocGroupInexNo, jdbcType=VARCHAR}
+		ORDER BY
+			FILE_SEQ_NO
+	</select>
+	
+	<update id="update" parameterType="edocFileProcess">
+		UPDATE
+			EDS_ELEC_DOC_FILE_PROCS_MGMT
+		SET
+			PROCS_STEP_CD = #{procsStepCd, jdbcType=CHAR},
+			PROCS_STEP_STCD = #{procsStepStcd, jdbcType=CHAR}
+		<if test = "pdfFileNm != null and pdfFileNm != ''">
+			, PDF_FILE_NM = #{pdfFileNm, jdbcType=VARCHAR}
+		</if>
+		<if test = "pageCnt != 0">
+			, PAGE_CNT = #{pageCnt, jdbcType=NUMERIC}
+		</if>
+		WHERE
+			ELEC_DOC_GROUP_INEX_NO = #{elecDocGroupInexNo, jdbcType=VARCHAR}
+		AND
+			FILE_SEQ_NO = #{fileSeqNo, jdbcType=NUMERIC}
+	</update>
+
+</mapper>

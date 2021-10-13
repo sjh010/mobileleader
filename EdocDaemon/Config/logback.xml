@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    
+    <!-- <property name="LOGS_PATH" value="/log/create_daemon"/> -->
+    <property name="LOG_PATH" value="D:\\log"/>
+    <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] %-5level [%thread] %logger[%method:%line] - %msg%n" />
+	
+	<appender name="CONSOL" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+		<Pattern>${LOG_PATTERN}</Pattern>
+		</layout>
+	</appender>
+	
+	<!-- File Appender -->
+	<appender name="edocLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${LOG_PATH}/edoc.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/history/edoc_%d{yyyyMMdd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>  
+
+    <logger name="com.mobileleader.edoc" level="INFO">
+		<appender-ref ref="CONSOL" />
+		<appender-ref ref="edocLog" />
+	</logger>
+
+</configuration>

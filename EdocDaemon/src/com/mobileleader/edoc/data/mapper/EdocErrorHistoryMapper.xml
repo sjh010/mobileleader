@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobileleader.edoc.data.mapper.EdocErrorHistoryMapper">
+	<resultMap id="BaseResultMap" type="com.mobileleader.edoc.data.dao.TbEdsElecDocGroupProcsErrHstrVo">
+		<result column="ELEC_DOC_GROUP_INEX_NO" jdbcType="VARCHAR" property="elecDocGroupInexNo" />
+		<result column="SEQNO" jdbcType="NUMERIC" property="seqno" />
+		<result column="CRTN_TIME" jdbcType="TIMESTAMP" property="crtnTime" />
+		<result column="PROCS_STEP_CD" jdbcType="CHAR" property="procsStepCd" />
+		<result column="PROCS_STEP_STCD" jdbcType="CHAR" property="procsStepStcd" />
+		<result column="PROCS_STEP_MSG_CD" jdbcType="CHAR" property="procsStepMsgCd" />
+		<result column="PROCS_STEP_ST_TIME" jdbcType="TIMESTAMP" property="procsStepStTime" />
+		<result column="PROCS_STEP_ED_TIME" jdbcType="TIMESTAMP" property="procsStepEdTime" />
+		<result column="ERR_MSG" jdbcType="VARCHAR" property="errMsg" />
+		<result column="SVR_IP" jdbcType="VARCHAR" property="svrIp" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		ELEC_DOC_GROUP_INEX_NO, SEQNO, CRTN_TIME, PROCS_STEP_CD, PROCS_STEP_STCD,
+		PROCS_STEP_MSG_CD, PROCS_STEP_ST_TIME, PROCS_STEP_ED_TIME, ERR_MSG, SVR_IP
+	</sql>
+	
+	<select id="selectDuplicateError" parameterType="edocErrorInfo" resultType="Integer">
+		SELECT
+			count(ELEC_DOC_GROUP_INEX_NO)
+		FROM
+			EDS_ELEC_DOC_GROUP_PROCS_ERR_HSTR
+		WHERE
+			ELEC_DOC_GROUP_INEX_NO = #{elecDocGroupInexNo, jdbcType=VARCHAR}
+		AND
+			PROCS_STEP_CD = #{procsStepCd, jdbcType=CHAR}
+		AND
+			PROCS_STEP_STCD = #{procsStepStcd, jdbcType=CHAR}
+	</select>
+	
+	<insert id="insert" parameterType="edocErrorInfo">
+		INSERT INTO EDS_ELEC_DOC_GROUP_PROCS_ERR_HSTR
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			ELEC_DOC_GROUP_INEX_NO,
+			CRTN_TIME,
+			PROCS_STEP_CD,
+			PROCS_STEP_STCD,
+			PROCS_STEP_MSG_CD,
+			PROCS_STEP_ST_TIME,
+			PROCS_STEP_ED_TIME,
+			SEQNO,
+			ERR_MSG,
+			SVR_IP
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			#{elecDocGroupInexNo, jdbcType=VARCHAR},
+			#{crtnTime, jdbcType=TIMESTAMP},
+			#{procsStepCd, jdbcType=CHAR},
+			#{procsStepStcd, jdbcType=CHAR},
+			#{procsStepMsgCd, jdbcType=CHAR},
+			#{procsStepStTime, jdbcType=TIMESTAMP},
+			#{procsStepEdTime, jdbcType=TIMESTAMP},
+			#{seqno, jdbcType=NUMERIC},
+			#{errMsg, jdbcType=VARCHAR},
+			#{svrIp, jdbcType=VARCHAR}
+		</trim>
+	</insert>
+	
+</mapper>

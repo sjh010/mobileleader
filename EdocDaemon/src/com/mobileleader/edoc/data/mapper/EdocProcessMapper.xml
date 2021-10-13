@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobileleader.edoc.data.mapper.EdocProcessMapper">
+	<resultMap id="BaseResultMap" type="com.mobileleader.edoc.data.dao.TbEdsElecDocGroupProcsMgmtVo">
+		<result column="ELEC_DOC_GROUP_INEX_NO" jdbcType="VARCHAR" property="elecDocGroupInexNo" />
+		<result column="CRTN_TIME" jdbcType="TIMESTAMP" property="crtnTime" />
+		<result column="PROCS_STEP_CD" jdbcType="CHAR" property="procsStepCd" />
+		<result column="PROCS_STEP_STCD" jdbcType="CHAR" property="procsStepStcd" />
+		<result column="PROCS_STEP_MSG_CD" jdbcType="CHAR" property="procsStepMsgCd" />
+		<result column="PROCS_STEP_ST_TIME" jdbcType="TIMESTAMP" property="procsStepStTime" />
+		<result column="PROCS_STEP_ED_TIME" jdbcType="TIMESTAMP" property="procsStepEdTime" />
+		<result column="SVR_IP" jdbcType="VARCHAR" property="svrIp" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		ELEC_DOC_GROUP_INEX_NO, CRTN_TIME, PROCS_STEP_CD, PROCS_STEP_STCD, PROCS_STEP_MSG_CD,
+		PROCS_STEP_ST_TIME, PROCS_STEP_ED_TIME, SVR_IP
+	</sql>
+	
+	<select id="selectTaskCount" parameterType="String" resultType="Integer">
+		SELECT
+			COUNT(ELEC_DOC_GROUP_INEX_NO)
+		FROM
+			(
+				SELECT
+					<include refid="Base_Column_List" />
+				FROM
+					EDS_ELEC_DOC_GROUP_PROCS_MGMT
+				WHERE
+					PROCS_STEP_CD IN ('10', '20', '30', '40', '50')
+				AND
+					PROCS_STEP_STCD = '1'
+				AND
+					PROCS_STEP_MSG_CD = 'AAAAAA'
+				AND
+					SVR_IP = #{serverIp, jdbcType=VARCHAR}
+						
+				UNION
+				
+				SELECT
+					<include refid="Base_Column_List" />
+				FROM
+					EDS_ELEC_DOC_GROUP_PROCS_MGMT
+				WHERE
+					PROCS_STEP_CD IN ('20', '30', '40', '50', '70')
+				AND
+					PROCS_STEP_STCD = '9'
+				AND
+					PROCS_STEP_MSG_CD = 'AAAAAA'
+				AND
+					SVR_IP = #{serverIp, jdbcType=VARCHAR}
+			)
+	</select>
+	
+	<select id="selectTask" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM
+			(
+				SELECT
+					<include refid="Base_Column_List" />
+				FROM
+					EDS_ELEC_DOC_GROUP_PROCS_MGMT
+				WHERE
+					PROCS_STEP_CD IN ('10', '20', '30', '40', '50')
+				AND
+					PROCS_STEP_STCD = '1'
+				AND
+					PROCS_STEP_MSG_CD = 'AAAAAA'
+				AND
+					SVR_IP = #{serverIp, jdbcType=VARCHAR}
+						
+				UNION
+				
+				SELECT
+					<include refid="Base_Column_List" />
+				FROM
+					EDS_ELEC_DOC_GROUP_PROCS_MGMT
+				WHERE
+					PROCS_STEP_CD IN ('20', '30', '40', '50', '70')
+				AND
+					PROCS_STEP_STCD = '9'
+				AND
+					PROCS_STEP_MSG_CD = 'AAAAAA'
+				AND
+					SVR_IP = #{serverIp, jdbcType=VARCHAR}
+			)
+		ORDER BY 
+			CRTN_TIME, PROCS_STEP_ST_TIME
+	</select>
+	
+	<update id="update" parameterType="edocProcess">
+		UPDATE
+			EDS_ELEC_DOC_GROUP_PROCS_MGMT
+		SET
+			PROCS_STEP_CD = #{procsStepCd, jdbcType=CHAR}
+			, PROCS_STEP_STCD = #{procsStepStcd, jdbcType=CHAR}
+		<if test = "procsStepMsgCd != null and procsStepMsgCd != ''">
+			, PROCS_STEP_MSG_CD = #{procsStepMsgCd, jdbcType=CHAR}
+		</if>
+		<if test = "procsStepStTime != null">
+			, PROCS_STEP_ST_TIME = #{procsStepStTime, jdbcType=TIMESTAMP}
+		</if>
+		<if test = "procsStepEdTime != null">
+			, PROCS_STEP_ED_TIME = #{procsStepEdTime, jdbcType=TIMESTAMP}
+		</if>
+		WHERE
+			ELEC_DOC_GROUP_INEX_NO = #{elecDocGroupInexNo, jdbcType=VARCHAR}
+	</update>
+	
+	<select id="selectFinishTask" parameterType="String" resultType="hashmap">
+		SELECT 
+			A.ELEC_DOC_GROUP_INEX_NO, A.DSRB_CD
+		FROM 
+			EDS_ELEC_DOC_GROUP_BZWK_INFO A
+		JOIN ( 
+		    	SELECT 
+					ELEC_DOC_GROUP_INEX_NO
+				FROM 
+					EDS_ELEC_DOC_GROUP_PROCS_MGMT
+				WHERE 
+					PROCS_STEP_CD = '70'
+				AND 
+					PROCS_STEP_STCD = '1'
+				AND 
+					TO_CHAR(CRTN_TIME, 'YYYYMMDD') = #{targetDate}
+		     ) B
+		ON A.ELEC_DOC_GROUP_INEX_NO = B.ELEC_DOC_GROUP_INEX_NO
+	</select>
+	
+	<update id="updateTaskInit">
+		UPDATE
+			EDS_ELEC_DOC_GROUP_PROCS_MGMT
+		SET
+			PROCS_STEP_STCD = '9',
+			PROCS_STEP_MSG_CD = 'AAAAAA'
+		WHERE
+			PROCS_STEP_MSG_CD IN ('000000', 'CANCEL')
+	</update>
+</mapper>

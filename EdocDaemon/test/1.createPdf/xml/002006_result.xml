@@ -1,0 +1,600 @@
+<?xml version='1.0' encoding='utf-8'?>
+<formdatas version='1.0'>
+<formname><![CDATA[002006.xml]]></formname>
+<formdata>
+<field name='api_nm' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='api_ssno_front' type='edit' entry="true">
+<value><![CDATA[8888]]></value>
+<font>11</font>
+<linevalue><![CDATA[8888]]></linevalue>
+</field>
+<field name='api_ssno_back' type='edit' entry="true">
+<value><![CDATA[4444]]></value>
+<font>11</font>
+<linevalue><![CDATA[4444]]></linevalue>
+</field>
+<field name='LAI_BI_JOB_0' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_JOB_1' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_JOB_2' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_JOB_3' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_JOB_NAME' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_MSTA_0' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_MSTA_1' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_MSTA_2' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_MSTA_3' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_MSTA_4' type='radio'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_FEB' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='rldomicl_basc_addr' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='home_telno' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='hp_telno' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_NFUN' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_LVFUN' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_JGSTA' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_AAPIP' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_AAPIP1' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_DYEAR' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_DMONTH' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_DDAY' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_IR' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_PB' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_BI_CNUM' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_NSUM' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_BI_NESUM' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_REBUIL' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_RELAN' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_RELMY' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_RESME' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_REEPR' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSAS_RSTA_REFHE' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_HLGUA' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_BELDE' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_MRDRU' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_MGMRBE' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_EDVAL' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSAS_RSTA_DRHEI' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_CMODE' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_CMYEA' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_CUSE' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_ECVC' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSAS_RSTA_CRHEI' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_OPDEP' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_OPSTO' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_RSOP' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_RSTA_OPETC' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='CRSA_PSTA_OPETCN' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_EPRIC' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSAS_RSTA_OPNOT' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSA_RSTA_TEVAL' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='CRSAS_RSTA_TCOM' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_1' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_1' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_6' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_6' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_2' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_2' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_7' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_7' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_3' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_3' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_8' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_8' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_4' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_4' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_9' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_9' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_5' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_5' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_NFI_10' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_DD_AMO_10' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_RSTA_OOH' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_OOH_OMYS' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_OOH_MPAR' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_OOH_SING' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_OOH_APT' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_OOH_ETC' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_RBOU' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_RBOU_OMYS' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_RBOU_MPAR' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_RBOU_SING' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_RBOU_APT' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_RBOU_ETC' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_CHDO' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_CHDO_LDEP' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_RSTA_CHDO_MREN' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_RSTA_RBOU_FRES' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_FRES' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_RSTA_FRES_NAME' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_RSTA_FRES_REL' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_TNUM' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SISPE' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_REL_1' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_JOB_1' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_AGE_1' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_MINC_1' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SSTA_1' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_FSTA_REL_4' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_JOB_4' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_AGE_4' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_MINC_4' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SSTA_4' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_FSTA_REL_2' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_JOB_2' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_AGE_2' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_MINC_2' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SSTA_2' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_FSTA_REL_5' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_JOB_5' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_AGE_5' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_MINC_5' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SSTA_5' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_FSTA_REL_3' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_JOB_3' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_AGE_3' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_MINC_3' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SSTA_3' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_FSTA_REL_6' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_JOB_6' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_AGE_6' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_MINC_6' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_FSTA_SSTA_6' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_0' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_1' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_5' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_2' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_6' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_3' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_7' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_4' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='NAI_INFO_8' type='check'>
+<value><![CDATA[]]></value>
+</field>
+<field name='LAI_COU_YEAR' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_COU_MONTH' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_COU_DAY' type='edit'>
+<value><![CDATA[]]></value>
+<font>11</font>
+<linevalue><![CDATA[]]></linevalue>
+</field>
+<field name='LAI_COU_NAME' type='pen'>
+<value><![CDATA[]]></value>
+<strokes></strokes>
+</field>
+<field name='LAI_COU_SIGN' type='pen'>
+<value><![CDATA[]]></value>
+<strokes></strokes>
+</field>
+</formdata>
+<CreateDate>20190903170843</CreateDate>
+</formdatas>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobileleader.edoc.data.mapper.EdocBizMapper">
+	<resultMap id="BaseResultMap" type="com.mobileleader.edoc.data.dao.TbEdsElecDocGroupBzwkInfoVo">
+		<result column="ELEC_DOC_GROUP_INEX_NO" jdbcType="VARCHAR" property="elecDocGroupInexNo" />
+		<result column="SCN_NO" jdbcType="VARCHAR" property="scnNo" />
+		<result column="SUB_SCRN_NO" jdbcType="VARCHAR" property="subScrnNo" />
+		<result column="DSRB_CD" jdbcType="VARCHAR" property="dsrbCd" />
+		<result column="DSRB_NM" jdbcType="VARCHAR" property="dsrbNm" />
+		<result column="HNDR_NO" jdbcType="VARCHAR" property="hndrNo" />
+		<result column="HNDR_NM" jdbcType="VARCHAR" property="hndrNm" />
+		<result column="REG_TIME" jdbcType="TIMESTAMP" property="regTime" />
+		<result column="PRCS_TYCD" jdbcType="VARCHAR" property="prcsTycd" />
+		<result column="TRMN_NO" jdbcType="VARCHAR" property="trmnNo" />
+
+		<result column="MAIN_KEY" jdbcType="VARCHAR" property="mainKey" />
+		<result column="TASK_KEY" jdbcType="VARCHAR" property="taskKey" />
+		<result column="INSOURCE_ID" jdbcType="VARCHAR" property="insourceId" />
+		<result column="INSOURCE_TITLE" jdbcType="VARCHAR" property="insourceTitle" />
+		<result column="CUSTOMER_NAME" jdbcType="VARCHAR" property="customerName" />
+		<result column="MEMO" jdbcType="VARCHAR" property="memo" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		ELEC_DOC_GROUP_INEX_NO, SCN_NO, SUB_SCRN_NO, DSRB_CD, DSRB_NM, HNDR_NO, HNDR_NM, 
+		REG_TIME, PRCS_TYCD, TRMN_NO, MAIN_KEY, TASK_KEY, INSOURCE_ID, INSOURCE_TITLE,
+		CUSTOMER_NAME, MEMO
+	</sql>
+	
+	<select id="select" parameterType="String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM
+			EDS_ELEC_DOC_GROUP_BZWK_INFO
+		WHERE
+			ELEC_DOC_GROUP_INEX_NO = #{elecDocGroupInexNo, jdbcType=VARCHAR}
+	</select>
+</mapper>
